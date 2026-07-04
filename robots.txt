@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khorshid-tattoo.example.com/sitemap.xml

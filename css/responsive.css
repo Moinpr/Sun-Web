@@ -1,0 +1,47 @@
+/*
+  responsive.css
+  رسپانسیو کل سایت در دو breakpoint اصلی (دقیقاً مطابق نسخه‌ی اصلی):
+
+  - دسکتاپ و لپ‌تاپ (>980px): چیدمان پایه در فایل‌های هر بخش، با واحدهای
+    fluid مثل clamp() و vw، بنابراین در بازه‌ی دسکتاپ↔لپ‌تاپ نیازی به
+    breakpoint جداگانه نبوده و طراحی به‌صورت روان (fluid) خودش را با
+    عرض صفحه تطبیق می‌دهد.
+  - تبلت (721px تا 980px): گریدهای ۴ستونه به ۲ستونه تبدیل می‌شوند.
+  - موبایل (تا 720px): منوی کشویی تمام‌ارتفاع، گرید سبک‌ها تک‌ستونه،
+    پدینگ سکشن‌ها کاهش می‌یابد.
+
+  این فایل باید همیشه آخرین فایل CSS بارگذاری‌شده باشد تا override‌های آن
+  با اولویت درست اعمال شوند (دقیقاً مثل نسخه‌ی اصلی که این بخش انتهای
+  استایل‌شیت بود).
+*/
+
+/* ===== تبلت ===== */
+@media (max-width: 980px){
+  .about-grid{grid-template-columns:1fr;gap:40px;}
+  .styles-grid{grid-template-columns:repeat(2, 1fr);}
+  .gallery-grid{grid-template-columns:repeat(2, 1fr);}
+}
+
+/* ===== موبایل ===== */
+@media (max-width: 720px){
+  nav ul{
+    position:fixed;
+    top:0;right:0;
+    height:100vh;
+    width:72vw;
+    background:var(--ink-black-2);
+    flex-direction:column;
+    justify-content:center;
+    gap:30px;
+    transform:translateX(100%);
+    transition:transform 0.35s ease;
+    z-index:99;
+    padding:0 40px;
+  }
+  nav ul.open{transform:translateX(0);}
+  .nav-toggle{display:block;z-index:101;}
+  .styles-grid{grid-template-columns:1fr;}
+  .gallery-grid{grid-template-columns:repeat(2, 1fr);gap:10px;}
+  section{padding:70px 6vw;}
+  .contact-info-grid{gap:28px;}
+}

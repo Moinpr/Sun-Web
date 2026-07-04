@@ -1,0 +1,16 @@
+/*
+  animations.css
+  افکت عمومی و مشترکِ «ظاهر شدن هنگام اسکرول» (reveal) که در چند بخش از سایت
+  استفاده می‌شود، به‌علاوه‌ی احترام به تنظیم prefers-reduced-motion کاربر.
+  کیفریم‌های اختصاصیِ یک کامپوننت خاص (مثل bob در هیرو) کنار همان کامپوننت
+  در فایل خودش نگه داشته شده تا فایل هر بخش، مستقل و قابل‌فهم بماند.
+*/
+
+/* ===== Reveal animation ===== */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease, transform 0.7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1;transform:none;transition:none;}
+  .scroll-hint{animation:none;}
+}

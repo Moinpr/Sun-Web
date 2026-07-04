@@ -1,0 +1,19 @@
+/*
+  variables.css
+  توکن‌های طراحی (رنگ‌ها) — منبع واحد حقیقت برای پالت رنگی سایت.
+  مقادیر دقیقاً برابر با نسخه‌ی اصلی پروژه هستند تا ظاهر بصری صفحه بدون تغییر بماند.
+*/
+:root{
+  --ink-black:#0e0d0c;
+  --ink-black-2:#171513;
+  --paper:#f2ead8;
+  --paper-2:#e9dec5;
+  --sun-gold:#d9a441;
+  --sun-gold-bright:#eec56b;
+  --skin:#c99875;
+  --line-muted:#8a8178;
+  --text-on-dark:#ede6d8;
+  --text-on-dark-dim:#b8aea0;
+  --text-on-paper:#1c1916;
+  --text-on-paper-dim:#5b5347;
+}

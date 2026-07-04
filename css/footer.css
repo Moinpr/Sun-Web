@@ -1,0 +1,13 @@
+/*
+  footer.css
+  فوتر ساده‌ی سایت.
+*/
+footer{
+  background:var(--ink-black);
+  padding:34px 6vw;
+  text-align:center;
+  border-top:1px solid rgba(217,164,65,0.12);
+  color:var(--text-on-dark-dim);
+  font-size:0.85rem;
+}
+footer .latin-brand{font-family:'Bebas Neue',sans-serif;letter-spacing:0.3em;color:var(--sun-gold);font-size:0.78rem;margin-bottom:6px;}

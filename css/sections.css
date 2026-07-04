@@ -1,0 +1,18 @@
+/*
+  sections.css
+  پوسته‌ی عمومی سکشن‌ها: پس‌زمینه‌ی تیره/کاغذی و سربرگ مشترک هر بخش.
+*/
+section{position:relative;padding:100px 6vw;}
+.section-dark{background:var(--ink-black);}
+.section-paper{background:var(--paper);color:var(--text-on-paper);}
+
+.section-head{max-width:720px;margin:0 auto 56px;text-align:center;}
+.section-head .eyebrow{display:block;}
+.section-head h2{
+  font-size:clamp(2rem, 4.4vw, 3rem);
+  font-weight:800;
+  margin-top:6px;
+}
+.section-paper .section-head h2{color:var(--text-on-paper);}
+.section-dark .section-head h2{color:var(--text-on-dark);}
+.section-paper .eyebrow{color:#a9762a;}

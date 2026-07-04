@@ -1,0 +1,32 @@
+/*
+  base.css
+  ریست، استایل‌های پایه‌ی عناصر HTML و کلاس‌های کمکی عمومی.
+*/
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Vazirmatn',sans-serif;
+  background:var(--ink-black);
+  color:var(--text-on-dark);
+  overflow-x:hidden;
+}
+
+img{max-width:100%;display:block;}
+
+.logo-latin{
+  font-family:'Bebas Neue',sans-serif;
+  letter-spacing:0.18em;
+}
+
+/* ===== Utility: sun-ray divider ===== */
+.ray-divider{
+  width:100%;
+  height:46px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
+.ray-divider svg{height:40px;width:auto;}

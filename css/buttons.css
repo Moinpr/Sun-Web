@@ -1,0 +1,74 @@
+/*
+  buttons.css
+  تمام حالت‌های دکمه (.btn) در یک فایل.
+  توضیح درباره‌ی «تکرار کد»: در نگاه اول .btn-gold و .btn-insta شبیه هم به نظر
+  می‌رسند، اما بررسیِ دقیق نشان داد مقادیر آلفای رنگ‌ها در هر دو (پس‌زمینه،
+  رنگ حاشیه و سایه) عمداً کمی متفاوت‌اند. برای حفظ ۱۰۰ درصدیِ ظاهر فعلی سایت،
+  این دو عمداً به‌صورت دو بلوک مستقل نگه داشته شده‌اند؛ ادغام آن‌ها در یک
+  سلکتور مشترک باعث تغییر جزئی ولی واقعی در سایه/گرادیان می‌شد.
+*/
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  padding:15px 34px;
+  border-radius:999px;
+  font-size:0.95rem;
+  font-weight:600;
+  text-decoration:none;
+  transition:all 0.3s cubic-bezier(.2,.8,.2,1);
+  border:1px solid transparent;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  backdrop-filter:blur(14px) saturate(160%);
+  -webkit-backdrop-filter:blur(14px) saturate(160%);
+}
+.btn::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0) 45%);
+  pointer-events:none;
+}
+.btn:hover{transform:translateY(-3px) scale(1.02);}
+.btn:active{transform:translateY(-1px) scale(0.99);}
+
+.btn-gold{
+  background:linear-gradient(135deg, rgba(217,164,65,0.85), rgba(184,92,56,0.75));
+  color:#1a1308;
+  border-color:rgba(238,197,107,0.6);
+  box-shadow:0 8px 24px -8px rgba(217,164,65,0.55), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+.btn-gold:hover{
+  box-shadow:0 12px 30px -8px rgba(217,164,65,0.7), inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.btn-outline{
+  background:rgba(237,230,216,0.06);
+  border-color:rgba(237,230,216,0.28);
+  color:var(--text-on-dark);
+  box-shadow:0 8px 20px -10px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.08);
+}
+.btn-outline:hover{
+  background:rgba(217,164,65,0.12);
+  border-color:rgba(217,164,65,0.55);
+  color:var(--sun-gold-bright);
+}
+.btn-insta{
+  background:linear-gradient(135deg, rgba(217,164,65,0.85), rgba(184,92,56,0.7));
+  color:#1a1308;
+  border-color:rgba(238,197,107,0.55);
+  box-shadow:0 8px 24px -8px rgba(217,164,65,0.5), inset 0 1px 0 rgba(255,255,255,0.25);
+}
+.btn-insta:hover{
+  box-shadow:0 12px 30px -8px rgba(217,164,65,0.65), inset 0 1px 0 rgba(255,255,255,0.3);
+}
+.btn-whatsapp{
+  background:rgba(237,230,216,0.05);
+  border:1px dashed rgba(237,230,216,0.25);
+  color:var(--text-on-dark-dim);
+  cursor:default;
+  box-shadow:none;
+}
+.btn-whatsapp:hover{transform:none;}

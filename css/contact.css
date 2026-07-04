@@ -1,0 +1,51 @@
+/*
+  contact.css
+  بخش تماس با من: کارت شیشه‌ای (glassmorphism) با اطلاعات تماس و دکمه‌ها.
+  رنگ خودِ دکمه‌ها (.btn-insta / .btn-whatsapp) در buttons.css تعریف شده است.
+*/
+.contact-wrap{
+  max-width:760px;
+  margin:0 auto;
+  text-align:center;
+}
+.contact-wrap p.lead{
+  color:var(--text-on-dark-dim);
+  font-size:1.05rem;
+  line-height:1.9;
+  margin-bottom:40px;
+}
+.contact-card{
+  background:rgba(23,21,19,0.55);
+  border:1px solid rgba(217,164,65,0.25);
+  border-radius:28px;
+  padding:46px 5vw;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:28px;
+  backdrop-filter:blur(18px) saturate(160%);
+  -webkit-backdrop-filter:blur(18px) saturate(160%);
+  box-shadow:0 20px 50px -20px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.contact-info-grid{
+  display:flex;
+  gap:46px;
+  flex-wrap:wrap;
+  justify-content:center;
+  width:100%;
+}
+.contact-info-item{text-align:center;}
+.contact-info-item .ci-label{
+  font-size:0.72rem;
+  letter-spacing:0.2em;
+  color:var(--sun-gold);
+  text-transform:uppercase;
+  margin-bottom:8px;
+  font-family:'Bebas Neue',sans-serif;
+}
+.contact-info-item .ci-value{
+  font-size:1.05rem;
+  font-weight:600;
+  color:var(--text-on-dark);
+}
+.contact-buttons{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}

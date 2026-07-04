@@ -1,0 +1,73 @@
+/*
+  about.css
+  بخش «درباره من»: متن بیوگرافی در کنار کارت اطلاعات استودیو (کارتی تیره
+  که عمداً روی پس‌زمینه‌ی کاغذیِ سکشن قرار گرفته تا کنتراست ایجاد کند).
+*/
+.about-grid{
+  max-width:1100px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:60px;
+  align-items:start;
+}
+.about-text p{
+  font-size:1.08rem;
+  line-height:2.05;
+  color:var(--text-on-paper);
+  margin-bottom:20px;
+}
+.about-text .signoff{
+  font-weight:800;
+  font-size:1.3rem;
+  color:#a9762a;
+  margin-top:28px;
+}
+
+.info-card{
+  background:var(--ink-black-2);
+  border:1px solid rgba(217,164,65,0.25);
+  border-radius:20px;
+  padding:38px 34px;
+  position:relative;
+  overflow:hidden;
+}
+.info-card .card-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:30px;
+  padding-bottom:18px;
+  border-bottom:1px solid rgba(217,164,65,0.2);
+}
+.info-card .card-top .stamp{
+  width:30px;height:30px;
+  color:var(--sun-gold);
+  flex-shrink:0;
+}
+.info-card h3{
+  font-size:0.76rem;
+  letter-spacing:0.22em;
+  color:var(--sun-gold);
+  text-transform:uppercase;
+  font-family:'Bebas Neue',sans-serif;
+}
+.fact-grid{
+  position:relative;
+  z-index:1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px 20px;
+}
+.fact-grid .fact.full{grid-column:1 / -1;}
+.fact .f-label{
+  color:var(--text-on-dark-dim);
+  font-size:0.74rem;
+  letter-spacing:0.04em;
+  margin-bottom:7px;
+}
+.fact .f-value{
+  color:var(--text-on-dark);
+  font-weight:700;
+  font-size:1.05rem;
+}
