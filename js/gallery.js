@@ -1,19 +1,11 @@
-/**
- * gallery.js
- * رندر گرید نمونه‌کارها از روی داده‌ی works، فیلتر بر اساس سبک، و لایت‌باکس
- * تمام‌صفحه برای دیدن بزرگ‌شده‌ی هر اثر (با ناوبری کیبورد و کلیک بیرون برای
- * بستن — دقیقاً همان رفتار نسخه‌ی اصلی).
- */
+
 import { works } from './gallery-data.js';
 
 export function initGallery() {
   const grid = document.getElementById('galleryGrid');
   if (!grid) return;
 
-  // ===== ساخت گرید از روی داده =====
-  // از <figure>/<figcaption> به‌جای <div> استفاده شده (بهبود HTML معنایی)؛
-  // چون کلاس‌های CSS بر مبنای نام کلاس هستند نه نوع تگ، ظاهر بدون تغییر می‌ماند.
-  works.forEach((w, i) => {
+    works.forEach((w, i) => {
     const fig = document.createElement('figure');
     fig.className = 'gallery-item ' + w.cls;
     fig.setAttribute('data-cat', w.cat);
@@ -22,7 +14,7 @@ export function initGallery() {
     grid.appendChild(fig);
   });
 
-  // ===== فیلترها =====
+  
   const filterBtns = document.querySelectorAll('.filter-btn');
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -44,7 +36,7 @@ export function initGallery() {
     });
   });
 
-  // ===== لایت‌باکس =====
+  
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lbImg');
   const lbClose = document.getElementById('lbClose');
