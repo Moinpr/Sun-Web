@@ -14,9 +14,9 @@
 
 const BIRTHDAY_BANNER_CONFIG = {
   // تاریخ و ساعت اولین انتشار سایت — پیش از دیپلوی نهایی این را ویرایش کنید
-  firstDeployTime: '2026-07-04T18:00:00+03:30',
+  firstDeployTime: '2026-07-06T18:06:00+03:30',
   visibleWindowHours: 24,
-  autoFadeAfterMs: 9000,
+  autoFadeAfterMs: 15000,
   storageKey: 'khorshidBirthdayBannerDismissed',
 };
 
